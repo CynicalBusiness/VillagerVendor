@@ -10,10 +10,9 @@ settings:
    displayVendorMessage: true
    
    # Messages the vendor speaks when interacted with.
-   # If your message contains an apostrophe, escape it with a forwardslash [\]! These don't show up in-game.
    vendormessages:
       - 'Something look interesting?'
       - 'Another day another dollar.'
       - 'Take a look around. You might find something.'
-      - 'You have money? I\'ll give you something for it.' # There's an apostrophe here. I escaped it.
+      - 'You have money? I will give you something for it.' 
             

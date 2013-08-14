@@ -7,7 +7,7 @@ commands:
       description: VillagerVendor commands.
       usage: /vendor <sub-command> <args>
       permission: villagervendor
-      permission-message: 'You don\'t have permission for that, sorry.'
+      permission-message: 'You do not have permission for that, sorry.'
 
 permissions:
    villagervendor.*:
