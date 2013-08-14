@@ -9,10 +9,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class VillagerVendor extends JavaPlugin{
+public class VillagerVendor extends JavaPlugin implements Listener{
 	Plugin plugin = this;
 	String ver = this.getDescription().getVersion();
 	public static String head = ChatColor.DARK_GRAY+"["+ChatColor.DARK_AQUA+"VillagerVendor"+ChatColor.DARK_GRAY+"] "+ChatColor.RESET;
