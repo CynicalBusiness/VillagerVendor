@@ -1,0 +1,12 @@
+#==== VillagerVendor by Wehttam664 ====#
+#========== Vendor Data List ==========#
+
+vendors:
+   # This is a template vendor!
+   vendor_1:
+      name: 'Template Vendor'
+      chest:
+         x: 0
+         y: 0
+         z: 0
+      
