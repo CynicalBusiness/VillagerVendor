@@ -63,7 +63,7 @@ public class VendorHandler implements Listener {
 		Entity vendor = evt.getEntity();
 		if (damager instanceof Player && vendor.getType()==EntityType.VILLAGER){
 			// Making sure it's not some random damage event. We want when a player punches a villager.
-			plugin.getLogger().info("[DEBUD] Fired EntityDamageByEntityEvent from Player->Villager");
+			plugin.getLogger().info("[DEBUG] Fired EntityDamageByEntityEvent from Player->Villager");
 			if (plugin.getVendorsList().contains("vendors.vendor_"+vendor.getEntityId())){
 				// Check if it's actually a vendor. If so, cancel the damage and call a method. Otherwise, let it happen.
 				Player plyr = (Player)damager;
