@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Level;
 import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -38,6 +40,11 @@ public class VillagerVendor extends JavaPlugin{
 	}
 	private FileConfiguration vendors = null;
 	private static File vendorsFile = null;
+	
+	public boolean onCommand(CommandSender s, Command cmd, String l, String[] args){
+		
+		return false;
+	}
 	
 	public void reloadVendorsList() {
 		if (vendorsFile == null) {
