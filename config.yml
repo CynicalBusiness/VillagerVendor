@@ -6,6 +6,10 @@ settings:
    # Must be integral, no damage values! (Sorry!)
    debugID: 7
    
+   # The tool used to gather something's unique entity ID. (Doesn't stop players from damaging the entity.)
+   # Defaults to 288 (Feather).
+   entityIDTool: 288
+   
    # Should vendors display a chat message upon interaction? Defaults to true.
    displayVendorMessage: true
    
