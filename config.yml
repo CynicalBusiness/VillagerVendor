@@ -1,0 +1,19 @@
+#==== VillagerVendor by Wehttam664 ====#
+#======== Plugin Configuration ========#
+settings:
+   # The block ID for the debug block. Defaults to 7 (Bedrock).
+   # Hitting a vendor with this block displays debug information instead of opening the shop.
+   # Must be integral, no damage values! (Sorry!)
+   debugID: 7
+   
+   # Should vendors display a chat message upon interaction? Defaults to true.
+   displayVendorMessage: true
+   
+   # Messages the vendor speaks when interacted with.
+   # If your message contains an apostrophe, escape it with a forwardslash [\]! These don't show up in-game.
+   vendormessages:
+      - 'Something look interesting?'
+      - 'Another day another dollar.'
+      - 'Take a look around. You might find something.'
+      - 'You have money? I\'ll give you something for it.' # There's an apostrophe here. I escaped it.
+            
