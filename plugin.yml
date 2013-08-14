@@ -1,5 +1,5 @@
 name: VillagerVendor
-main: net.mayateck.VillagerVendor
+main: net.mayateck.VillagerVendor.VillagerVendor
 version: '0.00.01'
 
 commands:
