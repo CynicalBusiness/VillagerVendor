@@ -22,6 +22,7 @@ permissions:
          villagervendor.general.info: true
          villagervendor.general.help: true
          villagervendor.general.debug: op
+         villagervendor.general.getid: true
    villagervendor.admin:
       description: 'Admin commands for VillagerVendor.'
       children:
