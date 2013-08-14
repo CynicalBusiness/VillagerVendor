@@ -15,7 +15,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class VillagerVendor extends JavaPlugin implements Listener{
 	Plugin plugin = this;
-	String ver = this.getDescription().getVersion();
 	public static String head = ChatColor.DARK_GRAY+"["+ChatColor.DARK_AQUA+"VillagerVendor"+ChatColor.DARK_GRAY+"] "+ChatColor.RESET;
 	
 	@Override
@@ -27,7 +26,7 @@ public class VillagerVendor extends JavaPlugin implements Listener{
 		this.getLogger().info("Requesting disk response...");
 			this.saveDefaultConfig();
 			this.saveDefaultVendorsList();
-		this.getLogger().info("Ready! Loaded version "+ver+".");
+		this.getLogger().info("Ready!");
 		this.getLogger().info("#============================================#");
 	}
 	
