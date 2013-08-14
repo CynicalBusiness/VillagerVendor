@@ -61,6 +61,13 @@ public class VendorHandler implements Listener {
 	public void onVendorInteract(EntityDamageByEntityEvent evt){
 		Entity damager = evt.getDamager();
 		Entity vendor = evt.getEntity();
+		// For getting the EntityId.
+		if (damager instanceof Player){
+			Player plyr = (Player)damager;
+			if((plyr.getItemInHand().getTypeId()==plugin.getConfig().getInt("settings.entityIDTool")) && (plyr.hasPermission("villagervendor.general.getid"))){
+				plyr.sendMessage(VillagerVendor.head+"Entity ID: "+vendor.getEntityId());
+			}
+		}
 		if (damager instanceof Player && vendor.getType()==EntityType.VILLAGER){
 			// Making sure it's not some random damage event. We want when a player punches a villager.
 			plugin.getLogger().info("[DEBUG] Fired EntityDamageByEntityEvent from Player->Villager");
