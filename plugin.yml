@@ -1,0 +1,37 @@
+name: VillagerVendor
+main: net.mayateck.VillagerVendor
+version: '0.00.01'
+
+commands:
+   vendor:
+      description: VillagerVendor commands.
+      usage: /vendor <sub-command> <args>
+      permission: villagervendor
+      permission-message: 'You don\'t have permission for that, sorry.'
+
+permissions:
+   villagervendor.*:
+      description: 'Gives full access to VillagerVendor.'
+      children:
+         villagervendor.general: false
+         villagervendor.admin: op
+         villagervendor.use: true
+   villagervendor.general:
+      description: 'General VillagerVendor commands. (Info, help, etc.)'
+      children:
+         villagervendor.general.info: true
+         villagervendor.general.help: true
+         villagervendor.general.debug: op
+   villagervendor.admin:
+      description: 'Admin commands for VillagerVendor.'
+      children:
+         villagervendor.admin.create: op
+         villagervendor.admin.remove: op
+         villagervendor.admin.reloadconfig: op
+         villagervendor.admin.reloadvendors: op
+   villagervendor.use:
+      description: 'Use of Villager Vendors.'
+      children:
+         villagervendor.use.buy: true
+         villagervendor.use.sell: true # Coming soon!
+         villagervendor.use.view: true
