@@ -6,7 +6,7 @@ commands:
    vendor:
       description: VillagerVendor commands.
       usage: /vendor <sub-command> <args>
-      permission: villagervendor
+      permission: villagervendor.general
       permission-message: 'You do not have permission for that, sorry.'
 
 permissions:
@@ -14,25 +14,25 @@ permissions:
       description: 'Gives full access to VillagerVendor.'
       children:
          villagervendor.general: false
-         villagervendor.admin: op
+         villagervendor.admin: false
          villagervendor.use: true
    villagervendor.general:
       description: 'General VillagerVendor commands. (Info, help, etc.)'
       children:
          villagervendor.general.info: true
          villagervendor.general.help: true
-         villagervendor.general.debug: op
+         villagervendor.general.debug: false
          villagervendor.general.getid: true
    villagervendor.admin:
       description: 'Admin commands for VillagerVendor.'
       children:
-         villagervendor.admin.create: op
-         villagervendor.admin.remove: op
-         villagervendor.admin.reloadconfig: op
-         villagervendor.admin.reloadvendors: op
+         villagervendor.admin.create: false
+         villagervendor.admin.remove: false
+         villagervendor.admin.reloadconfig: false
+         villagervendor.admin.reloadvendors: false
    villagervendor.use:
       description: 'Use of Villager Vendors.'
       children:
          villagervendor.use.buy: true
-         villagervendor.use.sell: true # Coming soon!
+         villagervendor.use.sell: true
          villagervendor.use.view: true

@@ -1,6 +1,8 @@
 #==== VillagerVendor by Wehttam664 ====#
 #========== Vendor Data List ==========#
-
+vendorlist:
+   # Do not modify this! The plugin handles everything here!
+   - Template Vendor
 vendors:
    # This is a template vendor!
    vendor_1:

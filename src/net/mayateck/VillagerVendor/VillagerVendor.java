@@ -21,7 +21,6 @@ public class VillagerVendor extends JavaPlugin implements Listener{
 	public void onEnable(){
 		this.getLogger().info("#======# VillagerVendor by Wehttam664 #======#");
 		this.getLogger().info("Initializing...");
-			//getCommand("vendor").setExecutor(new CommandHandler(this));
 			new VendorHandler(this);
 		this.getLogger().info("Requesting disk response...");
 			this.saveDefaultConfig();
@@ -42,7 +41,45 @@ public class VillagerVendor extends JavaPlugin implements Listener{
 	private static File vendorsFile = null;
 	
 	public boolean onCommand(CommandSender s, Command cmd, String l, String[] args){
-		
+		if (cmd.getName().equalsIgnoreCase("vendor")){
+			if (args.length==0){
+				// TODO Plugin information.
+				return true;
+			} else if(args.length==1) {
+				if (args[0].equalsIgnoreCase("reload")){
+					if (s.hasPermission("villagervendor.admin.reloadconfig")){
+						this.reloadConfig();
+						s.sendMessage(VillagerVendor.head+"Reloaded confiuration.");
+						return true;
+					} else {
+						s.sendMessage(VillagerVendor.head+"You don't have permission for that, sorry.");
+						return true;
+					}
+				} else if(args[0].equalsIgnoreCase("reloadvendors")){
+					if (s.hasPermission("villagervendor.admin.reloadconfig")){
+						this.reloadVendorsList();
+						s.sendMessage(VillagerVendor.head+"Reloaded vendor list.");
+						return true;
+					} else {
+						s.sendMessage(VillagerVendor.head+"You don't have permission for that, sorry.");
+						return true;
+					}
+				} else if(args[0].equalsIgnoreCase("help")){
+					s.sendMessage(VillagerVendor.head+"Need to write the help.");
+					return true;
+				} else if(args[0].equalsIgnoreCase("debug")){
+					boolean test = this.getVendorsList().contains("vendors.*.name");
+					s.sendMessage(""+test);
+					return true;
+				} else {
+					s.sendMessage(VillagerVendor.head+"Invalid argument. See '/vendor help'.");
+					return true;
+				}
+			} else {
+				s.sendMessage(VillagerVendor.head+"Invalid argument number. See '/vendor help'.");
+				return true;
+			}
+		}
 		return false;
 	}
 	
