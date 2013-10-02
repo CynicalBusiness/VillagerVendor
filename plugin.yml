@@ -8,6 +8,11 @@ commands:
       usage: /vendor <sub-command> <args>
       permission: villagervendor.general
       permission-message: 'You do not have permission for that, sorry.'
+   shopitem:
+      description: 'Modifies item books.'
+      usage: '/shopitem [sub-command] <args>'
+      permission: villagervendor.shopitem
+      permission-message: 'You do not have permission for that, sorry.'
 
 permissions:
    villagervendor.*:
